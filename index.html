@@ -1,45 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Weather Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Dashboard</title>
 </head>
+
 <body>
-  <header>
-    <h1>Weather Dashboard</h1>
-    <form id="search-form">
-      <input type="text" id="city-input" placeholder="Enter a city">
-      <button type="submit">Search</button>
-    </form>
-  </header>
+    <header class="p-3 mb-2 bg-secondary text-white header">
+        <h1>Weather Dashboard</h1>
+    </header>
 
-  <main>
-    <section id="current-weather">
-      <h2>Current Weather</h2>
-      <div id="weather-info">
-        <p id="city-name"></p>
-        <p id="date"></p>
-        <img id="weather-icon" src="" alt="Weather Icon">
-        <p id="temperature"></p>
-        <p id="humidity"></p>
-        <p id="wind-speed"></p>
-      </div>
-    </section>
+    <main>
+        <section class="search-panel">
+            <div class="search-box">
+                <h3>Search for a City:</h3>
+                <form>
+                    <div class="form-row align-items-center">
+                        <div class="col-8 search-field">
+                            <label class="sr-only" for="cityName">City</label>
+                            <input type="text" class="form-control" id="cityName" placeholder="City Name">
+                        </div>
+                        <div class="col-3 search-button-panel">
+                            <button type="submit" class="btn btn-primary" id="search-button"><svg width="1em"
+                                    height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                                    <path fill-rule="evenodd"
+                                        d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="city-list-box">
+                        <ul class="list-group" id="city-list"></ul>
+                    </div>
+                </form>
+            </div>
+        </section>
 
-    <section id="forecast">
-      <h2>5-Day Forecast</h2>
-      <div id="forecast-container"></div>
-    </section>
+        <section class="results-panel">
+            <div class="current-conditions-panel">
+                <div class="name-block">
+                    <h3 id="city-name"></h3>
+                    <img src="" alt="" id="currentIcon">
+                </div>
+                <div>
+                    <p class="current-info" id="temperature"></p>
+                </div>
+                <div>
+                    <p class="current-info" id="humidity"></p>
+                </div>
+                <div>
+                    <p class="current-info" id="wind-speed"></p>
+                </div>
+                <div class="uv-index-block">
+                    <p>UV Index: </p>
+                    <p class="rounded current-info" id="uv-index"></p>
+                </div>
+            </div>
+            <div class="forecast-panel">
+                <h4>5-Day Forecast:</h4>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 id="day-0"></h5>
+                                </div>
+                                <div class="card-body">
+                                    <img src="" alt="" id="img-0">
+                                    <p class="card-text" id="temp-0"></p>
+                                    <p class="card-text" id="hum-0"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 id="day-1"></h5>
+                                </div>
+                                <div class="card-body">
+                                    <img src="" alt="" id="img-1">
+                                    <p class="card-text" id="temp-1"></p>
+                                    <p class="card-text" id="hum-1"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 id="day-2"></h5>
+                                </div>
+                                <div class="card-body">
+                                    <img src="" alt="" id="img-2">
+                                    <p class="card-text" id="temp-2"></p>
+                                    <p class="card-text" id="hum-2"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 id="day-3"></h5>
+                                </div>
+                                <div class="card-body">
+                                    <img src="" alt="" id="img-3">
+                                    <p class="card-text" id="temp-3"></p>
+                                    <p class="card-text" id="hum-3"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 id="day-4"></h5>
+                                </div>
+                                <div class="card-body">
+                                    <img src="" alt="" id="img-4">
+                                    <p class="card-text" id="temp-4"></p>
+                                    <p class="card-text" id="hum-4"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <aside id="search-history">
-      <h2>Search History</h2>
-      <ul id="history-list"></ul>
-    </aside>
-  </main>
-
-  <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
 
+</html>
