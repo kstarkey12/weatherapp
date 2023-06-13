@@ -1,127 +1,127 @@
 body {
-    margin: 5px;
+    margin: 5px; /* Sets the margin for the entire body */
 }
 
 main {
-    display: flex;
+    display: flex; /* Displays the 'main' element as a flex container */
 }
 
 section {
-    margin-top: 10px;
+    margin-top: 10px; /* Sets the margin on the top of 'section' elements */
+    background-color: rgba(19, 0, 128, 0.137); /* Sets the background color with RGBA values */
 }
 
 .header {
-    display: flex;
-    justify-content: center;
+    display: flex; /* Displays the '.header' element as a flex container */
+    justify-content: center; /* Centers the content horizontally within '.header' */
+    background-color: rgb(0, 45, 128); /* Sets the background color for '.header' */
+    color: green; /* Sets the text color for '.header' */
 }
 
 .search-panel {
-    width: 25%;
-    margin: 10px 20px 0 10px;
-    padding: 10px 0 10px 10px;
-    background-color: #DCDCDC;
+    width: 25%; /* Sets the width of '.search-panel' */
+    margin: 10px 20px 0 10px; /* Sets the margin for '.search-panel' */
+    padding: 10px 0 10px 10px; /* Sets the padding for '.search-panel' */
+    background-color: #DCDCDC; /* Sets the background color for '.search-panel' */
 }
 
 .search-button-panel {
-    margin-left: -52px;
+    margin-left: -52px; /* Adjusts the left margin for '.search-button-panel' */
 }
 
 .city-list-box {
-    margin-top: 5px;
+    margin-top: 5px; /* Sets the margin on the top of '.city-list-box' */
 }
 
 .city-name {
-    width: 89%;
+    width: 89%; /* Sets the width of '.city-name' */
 }
 
 .results-panel {
-    width: 75%;
-    padding-bottom: 10px;
-    visibility: hidden;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 75%; /* Sets the width of '.results-panel' */
+    padding-bottom: 10px; /* Sets the padding at the bottom of '.results-panel' */
+    visibility: hidden; /* Sets the visibility of '.results-panel' as hidden */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Sets the font family for '.results-panel' */
 }
 
 .current-conditions-panel {
-    border: 1px solid #C0C0C0;
-    border-right: none;
-    padding-left: 10px;
-    padding-bottom: 30px;
+    border: 1px solid #C0C0C0; /* Sets the border style for '.current-conditions-panel' */
+    border-right: none; /* Removes the right border of '.current-conditions-panel' */
+    padding-left: 10px; /* Sets the left padding for '.current-conditions-panel' */
+    padding-bottom: 30px; /* Sets the bottom padding for '.current-conditions-panel' */
 }
 
 .name-block,
 .uv-index-block {
-    display: flex;
-    align-items: center;
+    display: flex; /* Displays '.name-block' and '.uv-index-block' as flex containers */
+    align-items: center; /* Aligns the content vertically within '.name-block' and '.uv-index-block' */
 }
 
 #uv-index {
-    margin-left: 5px;
-    padding: 5px 10px;
+    margin-left: 5px; /* Adjusts the left margin for '#uv-index' */
+    padding: 5px 10px; /* Sets the padding for '#uv-index' */
 }
 
 .forecast-panel {
-    padding-top: 50px;
+    padding-top: 50px; /* Sets the top padding for '.forecast-panel' */
 }
 
 .container {
-    display: inline;
+    display: inline; /* Displays the '.container' element as an inline element */
 }
 
 .card-header,
 .card-body {
-    text-align: center;
+    text-align: center; /* Centers the text within '.card-header' and '.card-body' */
 }
 
 .card-header {
-    background-color: rgb(0, 255, 85);
-    color: white;
+    background-color: rgb(0, 255, 85); /* Sets the background color for '.card-header' */
+    color: white; /* Sets the text color for '.card-header' */
 }
 
 .card-body {
-    background-color: rgb(38, 117, 42);
+    background-color: rgba(117, 76, 38, 0.822); /* Sets the background color for '.card-body' */
 }
-
-
 
 /* Classes Added to Elements */
 
 .favorable {
-    background-color: green;
-    color: white;
+    background-color: green; /* Sets the background color for elements with the class '.favorable' */
+    color: white; /* Sets the text color for elements with the class '.favorable' */
 }
 
 .moderate {
-    background-color: yellow;
-    color: black;
+    background-color: yellow; /* Sets the background color for elements with the class '.moderate' */
+    color: black; /* Sets the text color for elements with the class '.moderate' */
 }
 
 .severe {
-    background-color: red;
-    color: white;
+    background-color: red; /* Sets the background color for elements with the class '.severe' */
+    color: white; /* Sets the text color for elements with the class '.severe' */
 }
-
 
 /* Viewports Styling*/
 
 @media screen and (max-width: 575px) {
     .search-panel {
-        width: 40%;
+        width: 40%; /* Adjusts the width of '.search-panel' for smaller screens */
     }
 
     .search-button-panel {
-        margin-left: 0px;
+        margin-left: 0px; /* Resets the left margin for '.search-button-panel' on smaller screens */
     }
 
     .search-panel h3 {
-        font-size: 15px;
+        font-size: 15px; /* Sets the font size of h3 elements within '.search-panel' on smaller screens */
     }
 
     .form-row {
-        display: block;
-        text-align: center;
+        display: block; /* Displays '.form-row' elements as block elements on smaller screens */
+        text-align: center; /* Centers the text within '.form-row' on smaller screens */
     }
 
     .results-panel {
-        width: 60%;
+        width: 60%; /* Adjusts the width of '.results-panel' for smaller screens */
     }
 }
